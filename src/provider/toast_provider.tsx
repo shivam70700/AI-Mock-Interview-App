@@ -1,5 +1,4 @@
 import { Toaster } from '@/components/ui/sonner'
-import React from 'react'
 
 const ToastProvider = () => {
     return (

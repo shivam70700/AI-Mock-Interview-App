@@ -2,7 +2,7 @@ import FormMockInterview from '@/components/form_mock_interview';
 import { db } from '@/config/firebase.config';
 import type { Interview } from '@/types';
 import { doc, getDoc } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 

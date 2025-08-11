@@ -1,8 +1,8 @@
 import { db } from '@/config/firebase.config';
 import type { Interview } from '@/types';
 import { doc, getDoc } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import  { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import LoaderPage from './loader';
 import CustomBreadCrumb from '@/components/custom_breadcrumb';
 import { Button } from '@/components/ui/button';
@@ -15,10 +15,10 @@ const MockLoadPage = () => {
 
     const { interviewId } = useParams<{ interviewId: string }>();
     const [interview, setInterview] = useState<Interview | null>(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading] = useState(false);
     const [isWebCamEnabled, setIsWebCamEnabled] = useState(false);
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     useEffect(() => {
         const fetchInterview = async () => {

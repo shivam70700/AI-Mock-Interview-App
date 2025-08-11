@@ -1,5 +1,5 @@
 import type { Interview } from '@/types';
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import LoaderPage from './loader';
 import { doc, getDoc } from 'firebase/firestore';
@@ -14,7 +14,7 @@ const MockInterviewPage = () => {
 
     const { interviewId } = useParams<{ interviewId: string }>();
     const [interview, setInterview] = useState<Interview | null>(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading] = useState(false);
 
     const navigate = useNavigate();
 

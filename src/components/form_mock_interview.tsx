@@ -10,7 +10,7 @@ import CustomBreadCrumb from "./custom_breadcrumb";
 import { toast } from "sonner";
 import Heading from "./heading";
 import { Button } from "./ui/button";
-import { Loader, Trash, Trash2 } from "lucide-react";
+import { Loader, Trash2 } from "lucide-react";
 import { Separator } from "./ui/separator";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import { Input } from "./ui/input";

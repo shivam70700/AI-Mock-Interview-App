@@ -1,7 +1,5 @@
 import useSpeechToText, { type ResultType } from 'react-hook-speech-to-text';
-import { useAuth } from "@clerk/clerk-react";
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { CircleStop, Loader, Mic, RefreshCw, Save, Video, VideoOff, WebcamIcon } from 'lucide-react';
 import Webcam from 'react-webcam';
 import { TooltipButton } from './tooltip_button';
@@ -30,7 +28,6 @@ const RecordAnswer = ({
     setIsWebCam,
 }: RecordAnswerProps) => {
     const {
-        error,
         interimResult,
         isRecording,
         results,
@@ -45,10 +42,7 @@ const RecordAnswer = ({
     const [isAiGenerating, setIsAiGenerating] = useState(false);
     const [aiResult, setAiResult] = useState<AIResponse | null>(null);
     const [open, setOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
-
-    const { userId } = useAuth();
-    const { interviewId } = useParams();
+    const [loading] = useState(false);
 
     // Clear Response
 
